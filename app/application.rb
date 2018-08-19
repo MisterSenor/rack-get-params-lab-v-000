@@ -27,7 +27,7 @@ class Application
       #This is take in a GET param with the key of "item"
       addition = req.params["item"]
       if @@items.include?(addition)
-        @@items << addition
+        @@cart << addition
       end
     else
       resp.write "Path Not Found"
