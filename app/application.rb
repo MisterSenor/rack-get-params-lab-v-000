@@ -26,7 +26,7 @@ class Application
     elsif req.path.match(/add/)
       #This is take in a GET param with the key of "item"
       addition = req.params["item"]
-      if !@@items.include?(addition)
+      if @@items.include?(addition)
         @@items << addition
       end
     else
