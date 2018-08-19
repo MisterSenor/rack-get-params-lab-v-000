@@ -26,8 +26,8 @@ class Application
     elsif req.path.match(/add/)
       #This is take in a GET param with the key of "item"
       req.params["item"]
-      if @@items.include?(params["item"])
-        @@items << params["item"]
+      if @@items.include?(req.params["item"])
+        @@items << req.params["item"]
       end
     else
       resp.write "Path Not Found"
