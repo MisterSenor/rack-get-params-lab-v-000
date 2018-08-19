@@ -29,7 +29,7 @@ class Application
       if @@items.include?(addition)
         @@cart << addition
         resp.write "added #{addition}"
-      elsif !items.include?(addition)
+      elsif !@@items.include?(addition)
         resp.write "We don't have that item"
       end
     else
