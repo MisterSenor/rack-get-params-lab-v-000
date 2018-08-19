@@ -2,7 +2,7 @@ class Application
 
   @@items = ["Apples","Carrots","Pears"]
   @@cart = []
-  
+
 
   def call(env)
     resp = Rack::Response.new
@@ -22,7 +22,7 @@ class Application
         @@cart.each do |item|
           resp.write "#{item}\n"
         end
-      end 
+      end
     
     else
       resp.write "Path Not Found"
